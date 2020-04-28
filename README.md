@@ -1,4 +1,4 @@
-# OracleConnectionTester
+# Oracle Connection Tester
 A simple java connection tester to run against either local or databases running in the Oracle Cloud using credential files.
 
 It has the following parameters
