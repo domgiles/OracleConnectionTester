@@ -65,7 +65,7 @@ public class OraLoad {
             ods.setConnectionProperties(connectionProperties);
             return ods.getConnection();
         } catch (SQLException e) {
-            logger.log(FINE, "SQL Exception Thown in connect()", e);
+            logger.log(FINE, "SQL Exception thrown in connect()", e);
             throw new RuntimeException(e);
         }
     }
@@ -84,7 +84,7 @@ public class OraLoad {
             pds.setConnectionProperties(prop);
             return pds.getConnection();
         } catch (SQLException e) {
-            logger.log(FINE, "SQL Exception Thown in connect()", e);
+            logger.log(FINE, "SQL Exception thrown in connect()", e);
             throw new RuntimeException(e);
         }
     }
@@ -177,8 +177,6 @@ public class OraLoad {
         Option option14 = new Option("tc", "thread count, defaults to 1");
         option14.setArgs(1);
         option14.setArgName("threadcount");
-        Option option15 = new Option("async", "run async transactions, defaults to false");
-        option15.setArgs(0);
         Option option25 = new Option("o", "output : valid values are stdout,csv");
         option25.setArgs(1);
         option25.setArgName("output");
@@ -192,10 +190,9 @@ public class OraLoad {
         Option option30 = new Option("debug", "turn on debugging. Written to standard out");
 
         options.addOption(option8).addOption(option9).addOption(option10).addOption(option30).
-                addOption(option14).addOption(option15).addOption(option25).addOption(option13).
+                addOption(option14).addOption(option25).addOption(option13).
                 addOption(option26).addOption(option27);
         CommandLineParser clp = new DefaultParser();
-//        CommandLineParser clp = new BasicParser();
         CommandLine cl;
         try {
             cl = clp.parse(options, arguments);
