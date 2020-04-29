@@ -14,4 +14,8 @@ usage: parameters:
  -tc <threadcount>     thread count, defaults to 1
  -u <username>         username
 ```
+You can invoke the command by calling the jar file as an option i.e.
+```$sh
+java -jar OracleConnectionTester-0.1.jar
+```
 
