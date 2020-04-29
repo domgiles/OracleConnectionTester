@@ -54,6 +54,7 @@ public class OraLoad {
     }
 
     private static Connection connect(String un, String pw, String cs) throws RuntimeException, Error {
+        // Standard dedicated connection to Oracle
         try {
             OracleDataSource ods = new OracleDataSource();
             ods.setUser(un);
