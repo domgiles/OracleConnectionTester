@@ -240,7 +240,7 @@ public class OraLoad {
                 if ((new File(cl.getOptionValue("cf")).exists())) {
                     setupSecureOracleCloudProperties("DummyPassw0rd!", cl.getOptionValue("cf"), true);
                 } else {
-                    System.err.printf("The credentials file %s does not exists. Please specify a valid path and retry.\n",cl.getOptionValue("cf"));
+                    System.err.printf("The credentials file %s does not exists. Please specify a valid path and retry.\n", cl.getOptionValue("cf"));
                     System.exit(-1);
                 }
             }
@@ -265,6 +265,7 @@ public class OraLoad {
     }
 
     public static Path setupSecureOracleCloudProperties(String passwd, String credentialsLocation, Boolean deleteOnExit) throws RuntimeException {
+//        Creates temp directory containing key, sqlnet.ora and tnsnames.ora to enable connection to the cloud.
         try {
             if (!testJCE()) {
                 throw new RuntimeException("Extended JCE support is not installed.");
