@@ -155,6 +155,7 @@ public class OracleConnectionTester {
         }
     }
 
+
     private static Map<CommandLineOptions, Object> parseCommandLine(String[] arguments) {
 
         Map<CommandLineOptions, Object> parsedOptions = new HashMap<>();
