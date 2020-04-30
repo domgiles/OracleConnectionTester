@@ -188,9 +188,15 @@ public class OracleConnectionTester {
 
         Option option30 = new Option("debug", "turn on debugging. Written to standard out");
 
-        options.addOption(option8).addOption(option9).addOption(option10).addOption(option30).
+        OptionGroup helpGroup = new OptionGroup();
+        OptionGroup commandGroup = new OptionGroup();
+
+        helpGroup.addOption(option28);
+        commandGroup.addOption(option8).addOption(option9).addOption(option10).addOption(option30).
                 addOption(option14).addOption(option13).
-                addOption(option26).addOption(option27).addOption(option28);
+                addOption(option26).addOption(option27);
+        options.addOptionGroup(helpGroup).addOptionGroup(commandGroup);
+
         CommandLineParser clp = new DefaultParser();
         CommandLine cl;
         try {
