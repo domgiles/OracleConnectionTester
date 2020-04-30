@@ -175,24 +175,22 @@ public class OracleConnectionTester {
         Option option13 = new Option("ct", "pds or ods");
         option13.setArgs(1);
         option13.setArgName("threadcount");
-        Option option14 = new Option("tc", "thread count, defaults to 1");
+        Option option14 = new Option("tc", "thread count (connections), defaults to 1");
         option14.setArgs(1);
         option14.setArgName("threadcount");
-        Option option25 = new Option("o", "output : valid values are stdout,csv");
-        option25.setArgs(1);
-        option25.setArgName("output");
         Option option26 = new Option("cf", "credentials file in zip format");
         option26.setArgs(1);
         option26.setArgName("zipfile");
         Option option27 = new Option("dt", "Driver Type [thin,oci]");
         option27.setArgs(1);
         option27.setArgName("driver_type");
+        Option option28 = new Option("h", "print help messages");
 
         Option option30 = new Option("debug", "turn on debugging. Written to standard out");
 
         options.addOption(option8).addOption(option9).addOption(option10).addOption(option30).
-                addOption(option14).addOption(option25).addOption(option13).
-                addOption(option26).addOption(option27);
+                addOption(option14).addOption(option13).
+                addOption(option26).addOption(option27).addOption(option28);
         CommandLineParser clp = new DefaultParser();
         CommandLine cl;
         try {
