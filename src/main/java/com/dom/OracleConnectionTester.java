@@ -30,9 +30,9 @@ import java.util.zip.ZipFile;
 
 import static java.util.logging.Level.FINE;
 
-public class OraLoad {
+public class OracleConnectionTester {
 
-    private static final Logger logger = Logger.getLogger(OraLoad.class.getName());
+    private static final Logger logger = Logger.getLogger(OracleConnectionTester.class.getName());
 
     private enum CommandLineOptions {
         USERNAME,
